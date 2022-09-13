@@ -24,7 +24,7 @@ class GenreStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'genre' => ['required'],
+            'genre' => ['required','unique'],
         ];
     }
 }
