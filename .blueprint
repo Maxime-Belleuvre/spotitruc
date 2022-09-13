@@ -1,0 +1,121 @@
+created:
+    - app/Http/Controllers/MorceauController.php
+    - app/Http/Controllers/Version_morceauController.php
+    - app/Http/Controllers/PlaylistController.php
+    - app/Http/Controllers/AlbumController.php
+    - app/Http/Controllers/GenreController.php
+    - app/Http/Controllers/GroupeController.php
+    - app/Http/Controllers/ArtisteController.php
+    - app/Http/Controllers/TagController.php
+    - database/factories/MorceauFactory.php
+    - database/factories/VersionMorceauFactory.php
+    - database/factories/PlaylistFactory.php
+    - database/factories/AlbumFactory.php
+    - database/factories/GenreFactory.php
+    - database/factories/GroupeFactory.php
+    - database/factories/ArtisteFactory.php
+    - database/factories/TagFactory.php
+    - database/migrations/2022_09_08_092532_create_morceaus_table.php
+    - database/migrations/2022_09_08_092533_create_version_morceaus_table.php
+    - database/migrations/2022_09_08_092534_create_playlists_table.php
+    - database/migrations/2022_09_08_092535_create_albums_table.php
+    - database/migrations/2022_09_08_092536_create_genres_table.php
+    - database/migrations/2022_09_08_092537_create_groupes_table.php
+    - database/migrations/2022_09_08_092538_create_artistes_table.php
+    - database/migrations/2022_09_08_092539_create_tags_table.php
+    - database/migrations/2022_09_08_092540_create_orchestration_table.php
+    - database/migrations/2022_09_08_092541_create_appartient_album_table.php
+    - database/migrations/2022_09_08_092542_create_genre_version_morceau_table.php
+    - database/migrations/2022_09_08_092543_create_intervient_version_morceau_table.php
+    - database/migrations/2022_09_08_092544_create_contient_morceau_table.php
+    - database/migrations/2022_09_08_092545_create_genre_album_table.php
+    - database/migrations/2022_09_08_092546_create_produit_table.php
+    - database/migrations/2022_09_08_092547_create_genre_groupe_table.php
+    - database/migrations/2022_09_08_092548_create_genre_artiste_table.php
+    - database/migrations/2022_09_08_092549_create_etiquette_groupe_table.php
+    - database/migrations/2022_09_08_092550_create_membre_table.php
+    - database/migrations/2022_09_08_092551_create_etiquette_artiste_table.php
+    - app/Models/Morceau.php
+    - app/Models/Version_morceau.php
+    - app/Models/Playlist.php
+    - app/Models/Album.php
+    - app/Models/Genre.php
+    - app/Models/Groupe.php
+    - app/Models/Artiste.php
+    - app/Models/Tag.php
+    - database/seeders/MorceauSeeder.php
+    - database/seeders/VersionMorceauSeeder.php
+    - database/seeders/PlaylistSeeder.php
+    - database/seeders/AlbumSeeder.php
+    - database/seeders/GenreSeeder.php
+    - database/seeders/GroupeSeeder.php
+    - database/seeders/ArtisteSeeder.php
+    - database/seeders/TagSeeder.php
+    - tests/Feature/Http/Controllers/MorceauControllerTest.php
+    - tests/Feature/Http/Controllers/Version_morceauControllerTest.php
+    - tests/Feature/Http/Controllers/PlaylistControllerTest.php
+    - tests/Feature/Http/Controllers/AlbumControllerTest.php
+    - tests/Feature/Http/Controllers/GenreControllerTest.php
+    - tests/Feature/Http/Controllers/GroupeControllerTest.php
+    - tests/Feature/Http/Controllers/ArtisteControllerTest.php
+    - tests/Feature/Http/Controllers/TagControllerTest.php
+    - app/Http/Requests/MorceauStoreRequest.php
+    - app/Http/Requests/MorceauUpdateRequest.php
+    - app/Http/Requests/Version_morceauStoreRequest.php
+    - app/Http/Requests/Version_morceauUpdateRequest.php
+    - app/Http/Requests/PlaylistStoreRequest.php
+    - app/Http/Requests/PlaylistUpdateRequest.php
+    - app/Http/Requests/AlbumStoreRequest.php
+    - app/Http/Requests/AlbumUpdateRequest.php
+    - app/Http/Requests/GenreStoreRequest.php
+    - app/Http/Requests/GenreUpdateRequest.php
+    - app/Http/Requests/GroupeStoreRequest.php
+    - app/Http/Requests/GroupeUpdateRequest.php
+    - app/Http/Requests/ArtisteStoreRequest.php
+    - app/Http/Requests/ArtisteUpdateRequest.php
+    - app/Http/Requests/TagStoreRequest.php
+    - app/Http/Requests/TagUpdateRequest.php
+    - resources/views/morceau/index.blade.php
+    - resources/views/morceau/create.blade.php
+    - resources/views/morceau/show.blade.php
+    - resources/views/morceau/edit.blade.php
+    - resources/views/versionMorceau/index.blade.php
+    - resources/views/versionMorceau/create.blade.php
+    - resources/views/versionMorceau/show.blade.php
+    - resources/views/versionMorceau/edit.blade.php
+    - resources/views/playlist/index.blade.php
+    - resources/views/playlist/create.blade.php
+    - resources/views/playlist/show.blade.php
+    - resources/views/playlist/edit.blade.php
+    - resources/views/album/index.blade.php
+    - resources/views/album/create.blade.php
+    - resources/views/album/show.blade.php
+    - resources/views/album/edit.blade.php
+    - resources/views/genre/index.blade.php
+    - resources/views/genre/create.blade.php
+    - resources/views/genre/show.blade.php
+    - resources/views/genre/edit.blade.php
+    - resources/views/groupe/index.blade.php
+    - resources/views/groupe/create.blade.php
+    - resources/views/groupe/show.blade.php
+    - resources/views/groupe/edit.blade.php
+    - resources/views/artiste/index.blade.php
+    - resources/views/artiste/create.blade.php
+    - resources/views/artiste/show.blade.php
+    - resources/views/artiste/edit.blade.php
+    - resources/views/tag/index.blade.php
+    - resources/views/tag/create.blade.php
+    - resources/views/tag/show.blade.php
+    - resources/views/tag/edit.blade.php
+updated:
+    - routes/web.php
+models:
+    User: {  }
+    Morceau: { titre: 'string:100', relationships: { belongsToMany: 'Version_morceau:orchestration' } }
+    Version_morceau: { titre: 'string:100', duree_secondes: interger, filepath: 'string:100', extension: 'string:100', relationships: { belongsToMany: 'Morceau:orchestration,Album:appartient_album, Genre:genre_version_morceau, Artiste:intervient_version_morceau, Playlist:contient_morceau' } }
+    Playlist: { intitule: 'string:100', description: longtext, user_id: 'id foreign', relationships: { belongsToMany: 'Version_morceau:contient_morceau' } }
+    Album: { titre: 'string:100', annee: date, relationships: { belongsToMany: 'Version_morceau:appartient_album, Genre:genre_album, Groupe:produit' } }
+    Genre: { genre: 'enum:rock,pop,rap,variété', relationships: { belongsToMany: 'Version_morceau:genre_version_morceau, Album:genre_album, Groupe:genre_groupe, Artiste:genre_artiste' } }
+    Groupe: { nom: 'string:100', nationalite: 'string:100', date_creation: date, date_destruction: 'date nullable', relationships: { belongsToMany: 'Genre:genre_groupe, User:etiquette_groupe, Tag:etiquette_groupe, Artiste:membre' } }
+    Artiste: { nom: 'string:100', prenom: 'string:100', date_naissance: 'string:100', date_deces: 'string:100 nullable', nationalite: 'string:100', pseudo: 'string:100', relationships: { belongsToMany: 'Genre:genre_artiste, User:etiquette_artiste, Groupe:membre, Tag:etiquette_artiste, Version_morceau:intervient_version_morceau' } }
+    Tag: { tag: 'string:100', relationships: { belongsToMany: 'User:etiquette_artiste,User:etiquette_groupe, Groupe:etiquette_groupe, Artiste:etiquette_artiste' } }

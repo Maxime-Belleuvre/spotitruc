@@ -1,0 +1,90 @@
+models:
+  Morceau:
+    titre: string:100
+    relationships:
+      belongsToMany: Version_morceau:orchestration
+
+  Version_morceau:
+    titre: string:100
+    duree_secondes: interger
+    filepath: string:100
+    extension: string:100
+    relationships:
+      belongsToMany: Morceau:orchestration,Album:appartient_album, Genre:genre_version_morceau, Artiste:intervient_version_morceau, Playlist:contient_morceau
+      
+
+  Playlist:
+    intitule: string:100
+    description: longtext
+    user_id: id foreign
+    relationships:
+      belongsToMany: Version_morceau:contient_morceau
+    
+ 
+
+
+  Album:
+    titre: string:100
+    annee: date
+    relationships:
+      belongsToMany: Version_morceau:appartient_album, Genre:genre_album, Groupe:produit
+     
+        
+  Genre:
+    genre: enum:rock,pop,rap,variété
+    relationships:
+      belongsToMany: Version_morceau:genre_version_morceau, Album:genre_album, Groupe:genre_groupe, Artiste:genre_artiste
+
+  Groupe:
+    nom : string:100
+    nationalite: string:100
+    date_creation: date
+    date_destruction: date nullable
+    relationships:
+      belongsToMany: Genre:genre_groupe, User:etiquette_groupe, Tag:etiquette_groupe, Artiste:membre
+
+
+  Artiste:
+    nom: string:100
+    prenom: string:100
+    date_naissance: string:100
+    date_deces: string:100 nullable
+    nationalite: string:100
+    pseudo: string:100
+    relationships:
+      belongsToMany: Genre:genre_artiste, User:etiquette_artiste, Groupe:membre, Tag:etiquette_artiste, Version_morceau:intervient_version_morceau
+
+  Tag:
+    tag: string:100
+    relationships:
+      belongsToMany: User:etiquette_artiste,User:etiquette_groupe, Groupe:etiquette_groupe, Artiste:etiquette_artiste
+
+seeders: Morceau, Version_morceau, Playlist, Album, Genre, Groupe, Artiste, Tag
+
+
+controllers:
+
+  Morceau:
+    resource: web
+
+  Version_morceau:
+    resource: web
+
+  Playlist:
+    resource: web
+
+  Album:
+    resource: web
+        
+  Genre:
+    resource: web
+
+  Groupe:
+    resource: web
+
+  Artiste:
+    resource: web
+
+  Tag:
+    resource: web
+  
